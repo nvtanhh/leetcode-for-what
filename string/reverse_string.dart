@@ -1,12 +1,12 @@
 void main(List<String> args) {
   final List<String> s = ["h", "e", "l", "l", "o"];
 
-  Solution().reverseString(s);
+  _Solution().reverseString(s);
 
   print(s);
 }
 
-class Solution {
+class _Solution {
   void reverseString(List<String> s) {
     for (var i = 0; i < s.length ~/ 2; i++) {
       final temp = s[i];

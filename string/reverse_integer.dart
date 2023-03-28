@@ -3,12 +3,12 @@ import 'dart:math';
 void main(List<String> args) {
   final int x = 1534236469;
 
-  final rs = Solution().reverseInt(x);
+  final rs = _Solution().reverseInt(x);
 
   print(rs);
 }
 
-class Solution {
+class _Solution {
   int reverseInt(int x) {
     final isNegative = x < 0;
     x = x.abs();
