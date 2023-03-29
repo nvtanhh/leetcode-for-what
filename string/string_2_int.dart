@@ -3,7 +3,7 @@
 import 'dart:math';
 
 void main(List<String> args) {
-  final String s = "   -4";
+  final String s = "   -42";
 
   final rs = _Solution().myAtoi(s);
 
