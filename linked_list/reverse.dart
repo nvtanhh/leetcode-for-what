@@ -15,15 +15,15 @@ class _Solution {
     if (head == null) return null;
 
     var current = head.next;
-    ListNode? prev = head;
-    prev.next = null;
+    ListNode? result = head;
+    result.next = null;
     while (current != null) {
       final next = current.next;
-      current.next = prev;
-      prev = current;
+      current.next = result;
+      result = current;
       current = next;
     }
 
-    return prev;
+    return result;
   }
 }
