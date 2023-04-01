@@ -1,9 +1,9 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/553/
-
-import 'dart:html';
+import 'linked_list_model.dart';
 
 void main(List<String> args) {
-  final head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, null)))));
+  final head =
+      ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, null)))));
 
   final rs = _Solution.removeNthFromEnd(head, 2);
 
@@ -43,16 +43,5 @@ class _Solution {
     current = null;
 
     return head;
-  }
-}
-
-class ListNode {
-  int val;
-  ListNode? next;
-  ListNode(this.val, this.next);
-
-  @override
-  String toString() {
-    return 'ListNode{val: $val, next: $next}';
   }
 }
