@@ -25,6 +25,7 @@ void main(List<String> args) {
 class _Solution {
   TreeNode? invertTree(TreeNode? root) {
     if (root == null) return root;
+    
     final temp = invertTree(root.left);
     root.left = invertTree(root.right);
     root.right = temp;
