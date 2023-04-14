@@ -37,27 +37,38 @@ class _Solution {
 
     // return rs;
 
-    final roman = {
-      'M': 1000,
-      'D': 500,
-      'C': 100,
-      'L': 50,
-      'X': 10,
-      'V': 5,
-      'I': 1,
-    };
-
     int rs = 0;
 
     for (int i = 0; i < s.length - 1; i++) {
-      if ((roman[s[i]] ?? 0) < (roman[s[i + 1]] ?? 0)) {
-        rs -= roman[s[i]] ?? 0;
+      if (_getValue(s[i]) < _getValue(s[i + 1])) {
+        rs -= _getValue(s[i]);
       } else {
-        rs += roman[s[i]] ?? 0;
+        rs += _getValue(s[i]);
       }
     }
-    rs += roman[s[s.length - 1]] ?? 0;
+    rs += _getValue(s[s.length - 1]);
 
     return rs;
+  }
+
+  int _getValue(String s) {
+    switch (s) {
+      case 'V':
+        return 5;
+      case 'L':
+        return 50;
+      case 'D':
+        return 500;
+      case 'X':
+        return 10;
+      case 'C':
+        return 100;
+      case 'M':
+        return 1000;
+      case 'I':
+        return 1;
+      default:
+        return 0;
+    }
   }
 }
