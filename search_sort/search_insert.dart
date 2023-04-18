@@ -8,8 +8,10 @@ void main(List<String> args) {
 
 class _Solution {
   int searchInsert(List<int> nums, int target) {
-    for (var i = 0; i < nums.length; i++) {
-      if (nums[i] >= target) return i;
+    for (int number in nums) {
+      if (number >= target) {
+        return nums.indexOf(number);
+      }
     }
 
     return nums.length;
